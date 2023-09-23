@@ -1,4 +1,4 @@
--- center the current buffer in the screen. Similar to Goyo, but seems to work better for actual code 
+-- center the current buffer in the screen. Similar to Goyo, but seems to work better for actual code
 return {
     {
         "smithbm2316/centerpad.nvim",
@@ -10,18 +10,47 @@ return {
                 vim.opt.relativenumber = false
                 vim.opt.number = false
                 require('centerpad').toggle{ leftpad = 20, rightpad = 20 }
-                vim.opt.relativenumber = true 
+                vim.opt.relativenumber = true
+                vim.opt.number = true
+            end, {})
+
+            vim.api.nvim_create_user_command("ToggleCenterpadLeft", function()
+                vim.opt.relativenumber = false
+                vim.opt.number = false
+                require('centerpad').toggle{ leftpad = 20, rightpad = 0 }
+                vim.opt.relativenumber = true
+                vim.opt.number = true
+            end, {})
+
+            vim.api.nvim_create_user_command("ToggleCenterpadRight", function()
+                vim.opt.relativenumber = false
+                vim.opt.number = false
+                require('centerpad').toggle{ leftpad = 0, rightpad = 20 }
+                vim.opt.relativenumber = true
                 vim.opt.number = true
             end, {})
 
             -- keybinding
             vim.api.nvim_set_keymap(
-                'n', 
-                '<leader>z', 
-                ":ToggleCenterpad<cr>",
+                'n',
+                '<leader>z',
+                ":togglecenterpad<cr>",
                 { silent = true, noremap = true }
             )
 
+            vim.api.nvim_set_keymap(
+                'n',
+                '<leader>zl',
+                ":ToggleCenterpadLeft<cr>",
+                { silent = true, noremap = true }
+            )
+
+            vim.api.nvim_set_keymap(
+                'n',
+                '<leader>zr',
+                ":ToggleCenterpadRight<cr>",
+                { silent = true, noremap = true }
+            )
 
         end
     }
