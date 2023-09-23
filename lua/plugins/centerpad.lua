@@ -34,7 +34,7 @@ return {
             vim.api.nvim_set_keymap(
                 'n',
                 '<leader>z',
-                ":togglecenterpad<cr>",
+                ":ToggleCenterpad<cr>",
                 { silent = true, noremap = true }
             )
 
