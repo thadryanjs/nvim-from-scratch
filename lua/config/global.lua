@@ -21,6 +21,10 @@ end
 --- [ Global Vim Settings ]
 
 
+-- space as leader
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 -- PLEASE
 imap("jj", "<Esc>")
 
@@ -28,7 +32,11 @@ imap("jj", "<Esc>")
 imap("<C-s>", "<cmd>:w<cr><esc>")
 nmap("<C-s>", "<cmd>:w<cr><esc>")
 
-nmap("<leader>h", ":e /home/thadryan/Documents/Vault/priority-workspaces-overview.md<cr>")
+-- home
+nmap("<leader>h", ":e /home/thadryan/Documents/Vault/priority-workspaces-overview.md<CR>")
+
+-- preview buffer (https://stackoverflow.com/questions/28808922/quickly-switch-to-the-last-edited-buffer)
+nmap("<leader>p", "<C-^>")
 
 -- some basic things and options from (https://github.com/jmbuhr/quarto-nvim-kickstarter)
 -- use spaces as tabs
@@ -46,9 +54,6 @@ vim.opt.mousefocus = true
 -- use system clipboard
 vim.opt.clipboard:append 'unnamedplus'
 
--- space as leader
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 
 -- smarter search
 vim.opt.ignorecase = true
