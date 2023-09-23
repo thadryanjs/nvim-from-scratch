@@ -3,4 +3,4 @@ require "config.keymaps"
 require "config.lazy"
 require "config.autocmds"
 
-vim.cmd("colorscheme rose-pine")
+vim.cmd("colorscheme kanagawa-dragon")
