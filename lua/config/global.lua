@@ -26,6 +26,8 @@ local tabsize = 4
 vim.opt.expandtab = true
 vim.opt.shiftwidth = tabsize
 vim.opt.tabstop = tabsize
+vim.opt.autochdir = true
+vim.opt.undofile = true
 
 -- space as leader
 vim.g.mapleader = " "
@@ -38,3 +40,13 @@ vim.opt.smartcase = true
 -- indent
 vim.opt.smartindent = true
 vim.opt.breakindent = true
+
+vim.diagnostic.config({
+  virtual_text = false
+})
+
+-- show hover instead of inline lsp diagnostics (absuredly based)
+-- https://stackoverflow.com/questions/69290794/nvim-lsp-change-lspconfig-diagnostic-message-location
+vim.o.updatetime = 250
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+

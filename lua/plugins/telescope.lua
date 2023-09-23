@@ -12,7 +12,8 @@ return {
 
 
             })
-
+            
+            -- these are the ones suggested in the docs
             local builtin = require('telescope.builtin')
             local telescope = require('telescope')
 
@@ -20,6 +21,9 @@ return {
             vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
             vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
             vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+           
+            -- adding some more 
+            vim.keymap.set('n', '<leader>fr', ":Telescope oldfiles<cr>")
             
             telescope.load_extension("workspaces")
 
