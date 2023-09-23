@@ -5,13 +5,28 @@ return {
 
             local lspconfig = require('lspconfig')
             local coq = require('coq')
-            lspconfig.gopls.setup(coq.lsp_ensure_capabilities())
-            lspconfig.r_language_server.setup(coq.lsp_ensure_capabilities())
-            lspconfig.pyright.setup(coq.lsp_ensure_capabilities())
-            lspconfig.clangd.setup(coq.lsp_ensure_capabilities())
-            lspconfig.ltex.setup(coq.lsp_ensure_capabilities())
-            lspconfig.julials.setup(coq.lsp_ensure_capabilities())
-            lspconfig.lua_ls.setup(coq.lsp_ensure_capabilities())
+
+            lspconfig.gopls.setup(coq.lsp_ensure_capabilities({
+                autostart = false
+            }))
+            lspconfig.r_language_server.setup(coq.lsp_ensure_capabilities({
+                autostart = false
+            }))
+            lspconfig.pyright.setup(coq.lsp_ensure_capabilities({
+                autostart = false
+            }))
+            lspconfig.clangd.setup(coq.lsp_ensure_capabilities({
+                autostart = false
+            }))
+            lspconfig.ltex.setup(coq.lsp_ensure_capabilities({
+                autostart = false
+            }))
+            lspconfig.julials.setup(coq.lsp_ensure_capabilities({
+                autostart = false
+            }))
+            lspconfig.lua_ls.setup(coq.lsp_ensure_capabilities({
+                autostart = false
+            }))
         end
     }
 }
