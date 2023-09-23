@@ -28,6 +28,8 @@ imap("jj", "<Esc>")
 imap("<C-s>", "<cmd>:w<cr><esc>")
 nmap("<C-s>", "<cmd>:w<cr><esc>")
 
+nmap("<leader>h", ":e /home/thadryan/Documents/Vault/priority-workspaces-overview.md<cr>")
+
 -- some basic things and options from (https://github.com/jmbuhr/quarto-nvim-kickstarter)
 -- use spaces as tabs
 local tabsize = 4
@@ -37,7 +39,7 @@ vim.opt.tabstop = tabsize
 vim.opt.autochdir = false
 vim.opt.undofile = true
 vim.opt.number = true
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 -- enable mouse
 vim.opt.mouse = 'a'
 vim.opt.mousefocus = true
