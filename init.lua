@@ -5,7 +5,3 @@ require "config.autocmds"
 
 vim.cmd("colorscheme kanagawa-dragon")
 
--- experimental
-vim.cmd[[
-  autocmd FileType * ToggleCenterpad
-]]

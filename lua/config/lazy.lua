@@ -17,7 +17,8 @@ require("lazy").setup({
     spec = {
         {import = "plugins"},
         {import = "plugins.colorschemes"},
-        {import = "plugins.lsp-and-completion"}
+        {import = "plugins.lsp-and-completion"},
+        {import = "plugins.datascience"},
     },
     change_detection = {
         -- automatically check for config file changes and reload the ui
