@@ -8,7 +8,9 @@ return {
         config = function()
             
             require("telescope").setup({
-        
+                defaults = {
+                    file_ignore_patterns = {".git/", ".cache", "%.o", "%.a", "%.out", "%.class","%.pdf", "%.mkv", "%.mp4", "%.zip"},
+                }
 
 
             })
@@ -18,6 +20,9 @@ return {
             local telescope = require('telescope')
 
             vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+
+            vim.keymap.set("n", "<leader>fa", ":lua require('telescope.builtin').find_files({hidden=true})<CR>", {})
+            
             vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
             vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
             vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
