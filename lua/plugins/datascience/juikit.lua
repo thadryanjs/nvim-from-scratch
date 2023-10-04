@@ -1,6 +1,7 @@
 return {
     {
         "luk400/vim-jukit",
+        enabled = false,
         lazy = true,
         config = function()
             vim.g.jukit_shell_cmd = "R"

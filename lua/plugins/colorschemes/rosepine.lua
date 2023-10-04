@@ -1,9 +1,10 @@
 return {
     {
-        "rose-pine/neovim", 
+        "rose-pine/neovim",
         config = function()
             require("rose-pine").setup({
-                disable_italics = false
+                disable_italics = true,
+                disable_background = true
             })
         end
     }

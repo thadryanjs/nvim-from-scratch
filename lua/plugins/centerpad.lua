@@ -33,24 +33,24 @@ return {
             -- keybinding
             vim.api.nvim_set_keymap(
                 'n',
-                '<leader>z',
+                '<leader>zz',
                 ":ToggleCenterpad<cr>",
                 { silent = true, noremap = true }
             )
 
-            vim.api.nvim_set_keymap(
-                'n',
-                '<leader>lz',
-                ":ToggleCenterpadLeft<cr>",
-                { silent = true, noremap = true }
-            )
-
-            vim.api.nvim_set_keymap(
-                'n',
-                '<leader>rz',
-                ":ToggleCenterpadRight<cr>",
-                { silent = true, noremap = true }
-            )
+--            vim.api.nvim_set_keymap(
+--                'n',
+--                '<leader>lz',
+--                ":ToggleCenterpadLeft<cr>",
+--                { silent = true, noremap = true }
+--            )
+--
+--            vim.api.nvim_set_keymap(
+--                'n',
+--                '<leader>rz',
+--                ":ToggleCenterpadRight<cr>",
+--                { silent = true, noremap = true }
+--            )
 
         end
     }
