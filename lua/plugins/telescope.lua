@@ -21,8 +21,8 @@ return {
 
             vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 
-            vim.keymap.set("n", "<leader>fa", ":lua require('telescope.builtin').find_files({hidden=true})<CR>", {})
-            
+            --vim.keymap.set("n", "<leader>fa", ":lua require('telescope.builtin').find_files({hidden=true})<CR>", {})
+
             vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
             vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
             vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
@@ -31,6 +31,8 @@ return {
             vim.keymap.set('n', '<leader>fr', ":Telescope oldfiles<cr>")
             
             telescope.load_extension("workspaces")
+            -- this doesn't work and I didn't need to do it before
+            -- telescope.load_extension("harpoon")
 
         end
 

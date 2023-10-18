@@ -24,6 +24,9 @@ require("lazy").setup({
         -- automatically check for config file changes and reload the ui
         enabled = false,
         notify = false,     -- get a notification when changes are found
+    },
+    dev = {
+        path = "/home/thadryan/Documents/Vault/Projects/ActiveProjects"
     }
 })
 

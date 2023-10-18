@@ -1,6 +1,7 @@
 
 --- [ Global Vim Settings ]
 
+-- set dev path for lazy
 
 -- space as leader
 vim.g.mapleader = " "
@@ -22,6 +23,10 @@ vim.opt.mousefocus = true
 -- use system clipboard
 vim.opt.clipboard:append 'unnamedplus'
 
+-- translating "set formatoptions-=r"
+-- doesn't work: https://www.reddit.com/r/neovim/comments/11ij7t4/how_to_set_formatoptionso_in_lua/
+--vim.opt.formatoptions:remove({ 'o' })
+-- vim.cmd(":set formatoptions-=r")
 
 -- smarter search
 vim.opt.ignorecase = true
@@ -41,7 +46,11 @@ vim.diagnostic.config {
   underline = true,
 }
 
+-- code folding is evil
+vim.opt.foldenable = false
 
+-- filetype
+vim.cmd [[ filetype plugin on ]]
 
 
 -- show hover instead of inline lsp diagnostics (absuredly based)

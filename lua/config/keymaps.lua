@@ -29,14 +29,25 @@ nmap("<leader>wo", ":e /home/thadryan/Documents/Vault/priority-workspaces-overvi
 nmap("<leader>pp", "<C-^>")
 
 -- [ Buffer padding ]
-nmap("<leader>lz", ":vs buffer | :vertical resize -60<cr>")
+nmap("<leader>lz", ":vs buffer | :vertical resize -120<cr>")
 
 -- [ Jupyter Notebook script hotkeys]
---imap("<leader>jc", "#%% [code]")
---imap("<leader>jm", "#%% [markdown]")
+imap("<A-c>", "#%% [code]")
+imap("<A-m>", "#%% [markdown]")
 
 nmap("<leader>jc", "i#%% [code]")
 nmap("<leader>jm", "i#%% [markdown]")
+
+-- cd to current file directory
+nmap("<leader>cd", ":cd %:p:h<CR>")
+
+-- telescope buffers
+nmap("<leader>fb", "<cmd>Telescope buffers<CR>")
+nmap("<leader>bp", "<cmd>bprevious<CR>")
+nmap("<leader>bn", "<cmd>bnext<CR>")
+
+-- pipe operator (This one can be used for Julias "Chain" and R)
+imap("<A-p>", " |>")
 
 -- sane diagnostics
 vim.api.nvim_create_user_command("DiagnosticsLight", function()
@@ -55,4 +66,5 @@ vim.api.nvim_create_user_command("DiagnosticsHeavy", function()
         underline = true,
     }
 end, {})
+
 

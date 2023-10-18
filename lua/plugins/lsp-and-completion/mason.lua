@@ -11,7 +11,8 @@ return {
                 "lua-language-server",
                 "r-languageserver",
                 "letek-ls",
-                "julia-lsp"
+                "julia-lsp",
+                "nimlsp"
             }
         },
 
