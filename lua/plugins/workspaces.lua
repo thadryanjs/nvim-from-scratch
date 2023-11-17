@@ -7,8 +7,9 @@ return {
                 path = "/home/thadryan/.config/workspaces.txt"
             })
 
-        vim.api.nvim_set_keymap("n", "<leader>fw", ":Telescope workspaces<CR>", { noremap = true, silent = true })
-        vim.api.nvim_set_keymap("n", "<leader>fi", ":e index.md<CR>", { noremap = true, silent = true })
+        vim.api.nvim_set_keymap("n", "<leader>wf", ":Telescope workspaces<CR>", { noremap = true, silent = true })
+        vim.api.nvim_set_keymap("n", "<leader>wi", ":e index.md<CR>", { noremap = true, silent = true })
+        vim.api.nvim_set_keymap("n", "<leader>wa", ":WorkspacesAdd<CR>", { noremap = true, silent = true })
 
         end
     }

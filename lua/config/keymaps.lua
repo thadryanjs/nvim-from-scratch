@@ -23,7 +23,7 @@ imap("<C-s>", "<cmd>:w!<cr><esc>")
 nmap("<C-s>", "<cmd>:w!<cr><esc>")
 
 -- home
-nmap("<leader>wo", ":e /home/thadryan/Documents/Vault/priority-workspaces-overview.md<CR>")
+nmap("<leader>wo", ":e /home/thadryan/Documents/Vault/workspaces-overview.md<CR>")
 
 -- preview buffer (https://stackoverflow.com/questions/28808922/quickly-switch-to-the-last-edited-buffer)
 nmap("<leader>pp", "<C-^>")
@@ -48,6 +48,9 @@ nmap("<leader>bn", "<cmd>bnext<CR>")
 
 -- pipe operator (This one can be used for Julias "Chain" and R)
 imap("<A-p>", " |>")
+
+-- task
+imap("<A-t>", "- [ ] ")
 
 -- sane diagnostics
 vim.api.nvim_create_user_command("DiagnosticsLight", function()
