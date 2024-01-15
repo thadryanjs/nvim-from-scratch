@@ -17,6 +17,9 @@ return {
                             bottom = 0,
                         },
                     }
+                },
+                integrations = {
+                    tmux = true, -- enable tmux integration
                 }
             })
 

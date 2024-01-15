@@ -58,5 +58,5 @@ vim.cmd [[ filetype plugin on ]]
 vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
 -- python provider
--- vim.g.python3_host_prog = '/usr/bin/python'
+vim.g.python3_host_prog = '/usr/bin/python'
 

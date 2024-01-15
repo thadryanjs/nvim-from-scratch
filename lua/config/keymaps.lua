@@ -22,6 +22,13 @@ imap("jj", "<Esc>")
 imap("<C-s>", "<cmd>:w!<cr><esc>")
 nmap("<C-s>", "<cmd>:w!<cr><esc>")
 
+nmap("j",  "gj")
+nmap("k", "gk")
+nmap("<Up>", "gk")
+nmap("<Down>", "gj")
+nmap("<C-c>", '"+y')
+nmap("<C-v>", '"+p')
+
 -- home
 nmap("<leader>wo", ":e /home/thadryan/Documents/Vault/workspaces-overview.md<CR>")
 
@@ -34,9 +41,19 @@ nmap("<leader>lz", ":vs buffer | :vertical resize -120<cr>")
 -- [ Jupyter Notebook script hotkeys]
 imap("<A-c>", "#%% [code]")
 imap("<A-m>", "#%% [markdown]")
+-- remove all code tags
+-- imap("<A-e>", ":%s/#%% [code\]")
+imap("<A-e>", ":%s/#%% \\[code\\]<CR>")
+-- search for code tags
+nmap("<A-f>", "/#%% \\[code\\]<CR>")
 
 nmap("<leader>jc", "i#%% [code]")
 nmap("<leader>jm", "i#%% [markdown]")
+nmap("<leader>je", ":%s/#%% \\[code\\]<CR>")
+nmap("<leader>jf", "/#%% \\[code\\]<CR>")
+
+-- remove highlighting
+nmap("<leader>nh", ":nohl<CR>")
 
 -- cd to current file directory
 nmap("<leader>cd", ":cd %:p:h<CR>")
@@ -47,9 +64,9 @@ nmap("<leader>bp", "<cmd>bprevious<CR>")
 nmap("<leader>bn", "<cmd>bnext<CR>")
 
 -- pipe operator (This one can be used for Julias "Chain" and R)
-imap("<A-p>", " |>")
+imap("<A-p>", " %>%")
 
--- task
+-- task/todo
 imap("<A-t>", "- [ ] ")
 
 -- sane diagnostics

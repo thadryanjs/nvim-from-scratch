@@ -1,5 +1,0 @@
-return {
-    {
-        "baabelfish/nvim-nim",
-    }
-}

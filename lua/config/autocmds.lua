@@ -15,6 +15,8 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
   command = [[setlocal formatoptions-=cro]],
 })
 
-
--- au BufRead,BufNewFile *.nim setfiletype nim
-
+-- set Snakefile filetype to python (I cant probably condense this)
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  pattern = { "Snakefile", "*.smk", "*.snake", "*.snakefile", "*.rules" },
+  command = [[set syntax=snakemake]],
+})
