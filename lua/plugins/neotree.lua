@@ -9,9 +9,9 @@ return {
             -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
         },
         config = function()
-
-            nmap('<c-b>', ':Neotree toggle dir=%:p:h<CR>')
-            nmap('<leader>nt', ':Neotree <CR>')
+            -- this sets the working dir - could be useful so I'm leaving it but not using it for now
+--            nmap('<c-b>', ':Neotree toggle dir=%:p:h<CR>')
+            nmap('<leader>nt', ':Neotree toggle<CR>')
 
             require("neo-tree").setup({
                 window = {
