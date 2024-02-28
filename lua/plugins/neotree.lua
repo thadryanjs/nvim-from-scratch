@@ -8,6 +8,9 @@ return {
             "MunifTanjim/nui.nvim",
             -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
         },
+        opts = {
+
+        },
         config = function()
             -- this sets the working dir - could be useful so I'm leaving it but not using it for now
 --            nmap('<c-b>', ':Neotree toggle dir=%:p:h<CR>')
@@ -16,6 +19,11 @@ return {
             require("neo-tree").setup({
                 window = {
                     width = 27
+                },
+                filesystem = {
+                    filtered_items = {
+                        hide_gitignored = false,
+                    }
                 }
             })
 
