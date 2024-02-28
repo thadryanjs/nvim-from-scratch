@@ -39,18 +39,26 @@ nmap("<leader>pp", "<C-^>")
 nmap("<leader>lz", ":vs buffer | :vertical resize -120<cr>")
 
 -- [ Jupyter Notebook script hotkeys]
-imap("<A-c>", "#%% [code]")
-imap("<A-m>", "#%% [markdown]")
--- remove all code tags
--- imap("<A-e>", ":%s/#%% [code\]")
-imap("<A-e>", ":%s/#%% \\[code\\]<CR>")
--- search for code tags
-nmap("<A-f>", "/#%% \\[code\\]<CR>")
+imap("<A-c>", "# %% [code]")
+imap("<A-m>", "# %% [markdown]")
 
-nmap("<leader>jc", "i#%% [code]")
-nmap("<leader>jm", "i#%% [markdown]")
-nmap("<leader>je", ":%s/#%% \\[code\\]<CR>")
-nmap("<leader>jf", "/#%% \\[code\\]<CR>")
+-- remove all code tags
+imap("<A-e>", ":%s/# %% \\[code\\]<CR>")
+-- search for code tags
+nmap("<A-f>", "/# %% \\[code\\]<CR>")
+
+nmap("<leader>jc", "i# %% [code]")
+nmap("<leader>jm", "i# %% [markdown]")
+nmap("<leader>je", ":%s/# %% \\[code\\]<CR>")
+nmap("<leader>jf", "/# %% \\[code\\]<CR>")
+
+-- set no conceal
+nmap("<leader>nc", ":setlocal conceallevel=0<CR>")
+
+-- [ Quarto hotkeys ]
+imap("<A-r>", "```{r}\n\n```")
+imap("<A-y>", "```{python}\n\n```<esc>")
+-- imap("<A-l>", "```{julia}\n\n```<esc>")
 
 -- remove highlighting
 nmap("<leader>nh", ":nohl<CR>")
@@ -63,8 +71,8 @@ nmap("<leader>fb", "<cmd>Telescope buffers<CR>")
 nmap("<leader>bp", "<cmd>bprevious<CR>")
 nmap("<leader>bn", "<cmd>bnext<CR>")
 
--- pipe operator (This one can be used for Julias "Chain" and R)
-imap("<A-p>", " %>%")
+-- pipe operator
+imap("<A-p>", "%>%")
 
 -- task/todo
 imap("<A-t>", "- [ ] ")

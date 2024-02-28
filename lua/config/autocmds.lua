@@ -20,3 +20,10 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
   pattern = { "Snakefile", "*.smk", "*.snake", "*.snakefile", "*.rules" },
   command = [[set syntax=snakemake]],
 })
+
+-- do not conceal characters in any file
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  pattern = { "*" },
+  command = [[setlocal conceallevel=0]],
+})
+-- some plugin must be turning this back on >_<
