@@ -39,16 +39,20 @@ nmap("<leader>pp", "<C-^>")
 nmap("<leader>lz", ":vs buffer | :vertical resize -120<cr>")
 
 -- [ Jupyter Notebook script hotkeys]
+-- insert and normal mode version
 imap("<A-c>", "# %% [code]")
-imap("<A-m>", "# %% [markdown]")
+-- looks weird, but it makes sure the markdown cell is automatically closed,
+-- first line is commented out, and is placed back automatically
+imap("<A-m>", "# %% [markdown]<CR><Esc>O\n\n\n# %% [code]<Esc>3ki# ")
+nmap("<leader>jc", "i# %% [code]")
+nmap("<leader>jm", "O# %% [markdown]<CR><Esc>O\n\n\n# %% [code]<Esc>3ki# ")
 
 -- remove all code tags
 imap("<A-e>", ":%s/# %% \\[code\\]<CR>")
 -- search for code tags
 nmap("<A-f>", "/# %% \\[code\\]<CR>")
 
-nmap("<leader>jc", "i# %% [code]")
-nmap("<leader>jm", "i# %% [markdown]")
+
 nmap("<leader>je", ":%s/# %% \\[code\\]<CR>")
 nmap("<leader>jf", "/# %% \\[code\\]<CR>")
 
