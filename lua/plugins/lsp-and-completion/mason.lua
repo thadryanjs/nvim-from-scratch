@@ -12,7 +12,8 @@ return {
                 "r-languageserver",
                 "letek-ls",
                 "julia-lsp",
-                "nimlsp"
+                "nimlsp",
+                "kotlin_language_server"
             }
         },
 

@@ -30,6 +30,9 @@ return {
             lspconfig.nimls.setup(coq.lsp_ensure_capabilities({
                 autostart = false
             }))
+            lspconfig.kotlin_language_server.setup(coq.lsp_ensure_capabilities({
+                autostart = false
+            }))
         end
     }
 }

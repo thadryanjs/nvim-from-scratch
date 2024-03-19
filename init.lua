@@ -5,5 +5,3 @@ require "config.autocmds"
 
 --vim.cmd("colorscheme iceberg")
 vim.cmd("colorscheme kanagawa-dragon")
-
-

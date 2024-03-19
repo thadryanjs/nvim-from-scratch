@@ -22,8 +22,8 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
 })
 
 -- do not conceal characters in any file
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
-  pattern = { "*" },
-  command = [[setlocal conceallevel=0]],
-})
+-- vim.api.nvim_create_autocmd({ "BufEnter" }, {
+--   pattern = { "*" },
+--   command = [[setlocal conceallevel=0]],
+-- })
 -- some plugin must be turning this back on >_<

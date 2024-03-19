@@ -22,6 +22,8 @@ vim.opt.mouse = 'a'
 vim.opt.mousefocus = true
 -- use system clipboard
 vim.opt.clipboard:append 'unnamedplus'
+--- don't hide characters (had this as autocommand too leaving for reference)
+vim.opt.conceallevel = 0
 
 -- translating "set formatoptions-=r"
 -- doesn't work: https://www.reddit.com/r/neovim/comments/11ij7t4/how_to_set_formatoptionso_in_lua/
