@@ -1,6 +1,7 @@
 return {
     {
         "ms-jpq/coq_nvim",
+        lazy = true,
         config = function()
 
             require("coq")

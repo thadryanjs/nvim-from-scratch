@@ -8,7 +8,10 @@ return {
 
             require("telescope").setup({
                 defaults = {
-                    file_ignore_patterns = {".git/", ".cache", "%.pdf", "%.mkv", "%.mp4", "%.zip", ".snakemake", ".ipynb_checkpoints"},
+                    file_ignore_patterns = {
+                        ".git/", ".cache", "%.pdf", "%.mkv", "%.mp4", "%.zip", ".snakemake", ".ipynb_checkpoints", ".pixi",
+                        "_build/html/_static"
+                    },
                 }
             })
 
