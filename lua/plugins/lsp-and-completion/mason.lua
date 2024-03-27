@@ -1,7 +1,8 @@
 return {
     {
         "williamboman/mason.nvim",
-        dependencies = { "williamboman/mason-lspconfig.nvim" }  ,
+        enabled = true,
+        dependencies = { "williamboman/mason-lspconfig.nvim" },
         opts = {
             -- this is not a standard option for Mason, it's for use with a custom command (see config)
             ensure_installed = {

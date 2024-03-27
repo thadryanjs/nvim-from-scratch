@@ -3,6 +3,7 @@ return{
     {
         "lifer0se/ezbookmarks.nvim",
         lazy = false,
+        enabled = true,
         config = function()
 
             require('ezbookmarks').setup{
@@ -24,5 +25,3 @@ return{
         end
     }
 }
-
-
