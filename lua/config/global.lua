@@ -39,9 +39,11 @@ vim.opt.smartindent = true
 vim.opt.breakindent = true
 
 
--- [ Diagnostic settings ]
-vim.o.updatetime = 1000
+-- [ LSP/Diagnostic settings ]
+vim.o.updatetime = 500
 
+-- how lsp diagnostics are displayed
+-- making these toggleable would be nice
 vim.diagnostic.config {
   virtual_text = false,
   signs = false,

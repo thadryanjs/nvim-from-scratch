@@ -19,6 +19,7 @@ return {
             --     autostart = false
             -- }))
             lspconfig.ltex.setup(coq.lsp_ensure_capabilities({
+                use_spellfile = true,
                 autostart = false
             }))
             lspconfig.julials.setup(coq.lsp_ensure_capabilities({
