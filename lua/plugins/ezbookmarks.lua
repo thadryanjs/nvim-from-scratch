@@ -19,7 +19,7 @@ return{
             vim.api.nvim_set_keymap("n", "<leader>kr", ":lua require('ezbookmarks').RemoveBookmark()<CR>",
                 { noremap = true, silent = true })
 
-            vim.api.nvim_set_keymap("n", "<leader>ko", ":lua require('ezbookmarks').OpenBookmark()<CR>",
+            vim.api.nvim_set_keymap("n", "<leader>kf", ":lua require('ezbookmarks').OpenBookmark()<CR>",
                 { noremap = true, silent = true })
 
         end

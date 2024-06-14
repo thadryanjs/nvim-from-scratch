@@ -2,7 +2,7 @@
 return {
     {
 	    'nvim-telescope/telescope.nvim',
-        tag = '0.1.3',
+        -- tag = '0.1.3',
         dependencies = { 'nvim-lua/plenary.nvim' },
         config = function()
 
@@ -12,7 +12,31 @@ return {
                         ".git/", ".cache", "%.pdf", "%.mkv", "%.mp4", "%.zip", ".snakemake", ".ipynb_checkpoints", ".pixi",
                         "_build/*.*", "target/*.*", "libs/*.*"
                     },
-                }
+                },
+
+
+                -- pickers = {
+                --   marks = {
+                --     attach_mappings = function(prompt_bufnr, map)
+                --       map("i", "<C-d>", function()
+                --         require("telescope.actions").delete_mark(prompt_bufnr)
+                --       end)
+                --       return true -- Keep default mappings as well as the custom ones
+                --     end,
+                --   },
+                -- },
+
+                pickers = {
+                    marks = {
+                      attach_mappings = function(_, map)
+                        map({"i", "n"}, "<C-d>", require("telescope.actions").delete_mark)
+                        return true
+                      end,
+                    },
+                  },
+
+
+
             })
 
             -- these are the ones suggested in the docs
@@ -36,6 +60,8 @@ return {
             vim.keymap.set('n', '<leader>fr', ":Telescope oldfiles<cr>")
 
             telescope.load_extension("workspaces")
+            -- telescope.load_extension('vim_bookmarks')
+
             -- this doesn't work and I didn't need to do it before
             -- telescope.load_extension("harpoon")
 

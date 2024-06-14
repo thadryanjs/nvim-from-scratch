@@ -1,8 +1,14 @@
 return {
     {
         "chentoast/marks.nvim",
-        setup = function()
+        config = function()
             require('marks').setup{}
+
+            vim.api.nvim_set_keymap('n', '<leader>mm', "<cmd>lua require('marks').toggle_mark()<CR>", { noremap = true, silent = true })
+            vim.api.nvim_set_keymap('n', '<leader>mn', "<cmd>lua require('marks').next_mark()<CR>", { noremap = true, silent = true })
+            vim.api.nvim_set_keymap('n', '<leader>mp', "<cmd>lua require('marks').prev_mark()<CR>", { noremap = true, silent = true })
+            vim.api.nvim_set_keymap('n', '<leader>mf', ":Telescope marks <CR>", { noremap = true, silent = true })
+
         end
     }
 }
