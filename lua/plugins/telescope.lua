@@ -22,19 +22,16 @@ return {
                       return true -- Keep default mappings as well as the custom ones
                     end,
                   },
+                  buffers = {
+                    attach_mappings = function(prompt_bufnr, map)
+                      map("i", "<C-x>", function()
+                        require("telescope.actions").delete_buffer(prompt_bufnr)
+                      end)
+                      return true -- Keep default mappings as well as the custom ones
+                    end,
+
+                  }
                 },
-
-                -- pickers = {
-                --     marks = {
-                --       attach_mappings = function(_, map)
-                --         map({"i", "n"}, "<C-d>", require("telescope.actions").delete_mark)
-                --         return true
-                --       end,
-                --     },
-                --  },
-
-
-
             })
 
             -- these are the ones suggested in the docs
