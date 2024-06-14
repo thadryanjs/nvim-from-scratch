@@ -1,6 +1,7 @@
 return {
     {
         "jalvesaq/zotcite",
+        lazy = true,
         enable = false,
         config = function()
             -- vim.g.zotcite_hl = 0

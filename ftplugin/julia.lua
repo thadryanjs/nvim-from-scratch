@@ -1,5 +1,3 @@
-
--- set two spaces as tabs for this file
 local tabsize = 4
 vim.opt.expandtab = true
 vim.opt.shiftwidth = tabsize

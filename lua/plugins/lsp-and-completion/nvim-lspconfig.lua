@@ -25,9 +25,14 @@ return {
             lspconfig.julials.setup(coq.lsp_ensure_capabilities({
                 autostart = false
             }))
-            -- lspconfig.lua_ls.setup(coq.lsp_ensure_capabilities({
-            --     autostart = false
-            -- }))
+
+            lspconfig.lua_ls.setup(coq.lsp_ensure_capabilities({
+                autostart = false
+            }))
+
+            lspconfig.rust_analyzer.setup(coq.lsp_ensure_capabilities({
+                autostart = false
+            }))
             -- lspconfig.nimls.setup(coq.lsp_ensure_capabilities({
             --     autostart = false
             -- }))

@@ -24,6 +24,7 @@ vim.opt.mousefocus = true
 vim.opt.clipboard:append 'unnamedplus'
 --- don't hide characters (had this as autocommand too leaving for reference)
 vim.opt.conceallevel = 0
+vim.opt.spellfile = "~/.config/spell/en.utf-8.add"
 
 -- translating "set formatoptions-=r"
 -- doesn't work: https://www.reddit.com/r/neovim/comments/11ij7t4/how_to_set_formatoptionso_in_lua/
@@ -46,7 +47,7 @@ vim.o.updatetime = 500
 -- making these toggleable would be nice
 vim.diagnostic.config {
   virtual_text = false,
-  signs = false,
+  signs = true,
   underline = true,
 }
 
@@ -62,5 +63,5 @@ vim.cmd [[ filetype plugin on ]]
 vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
 -- python provider
-vim.g.python3_host_prog = '/usr/bin/python'
+vim.g.python3_host_prog = '/usr/bin/python3'
 

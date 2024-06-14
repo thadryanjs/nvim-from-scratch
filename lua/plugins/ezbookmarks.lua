@@ -13,13 +13,13 @@ return{
                 use_bookmark_dir = 0
             }
 
-            vim.api.nvim_set_keymap("n", "<leader>ma", ":lua require('ezbookmarks').AddBookmark()<CR>",
+            vim.api.nvim_set_keymap("n", "<leader>ka", ":lua require('ezbookmarks').AddBookmark()<CR>",
                 { noremap = true, silent = true })
 
-            vim.api.nvim_set_keymap("n", "<leader>mr", ":lua require('ezbookmarks').RemoveBookmark()<CR>",
+            vim.api.nvim_set_keymap("n", "<leader>kr", ":lua require('ezbookmarks').RemoveBookmark()<CR>",
                 { noremap = true, silent = true })
 
-            vim.api.nvim_set_keymap("n", "<leader>mo", ":lua require('ezbookmarks').OpenBookmark()<CR>",
+            vim.api.nvim_set_keymap("n", "<leader>ko", ":lua require('ezbookmarks').OpenBookmark()<CR>",
                 { noremap = true, silent = true })
 
         end

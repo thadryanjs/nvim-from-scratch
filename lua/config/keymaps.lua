@@ -53,8 +53,14 @@ imap("<A-e>", ":%s/# %% \\[code\\]<CR>")
 nmap("<A-f>", "/# %% \\[code\\]<CR>")
 
 
-nmap("<leader>je", ":%s/# %% \\[code\\]<CR>")
+-- nmap("<leader>je", ":%s/# %% \\[code\\]<CR>")
 nmap("<leader>jf", "/# %% \\[code\\]<CR>")
+
+-- close all buffers except current
+-- :w | %bd | e# | bd
+nmap("<leader>ca", ":w | %bd | e# | bd#<CR>")
+
+-- remove current quickfix entry under cursor (apparently impossible lol)
 
 -- set no conceal
 nmap("<leader>nc", ":setlocal conceallevel=0<CR>")

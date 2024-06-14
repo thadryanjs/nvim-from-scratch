@@ -10,7 +10,7 @@ return {
                 defaults = {
                     file_ignore_patterns = {
                         ".git/", ".cache", "%.pdf", "%.mkv", "%.mp4", "%.zip", ".snakemake", ".ipynb_checkpoints", ".pixi",
-                        "_build/*.*"
+                        "_build/*.*", "target/*.*", "libs/*.*"
                     },
                 }
             })
