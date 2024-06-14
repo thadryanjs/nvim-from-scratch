@@ -10,30 +10,28 @@ return {
                 defaults = {
                     file_ignore_patterns = {
                         ".git/", ".cache", "%.pdf", "%.mkv", "%.mp4", "%.zip", ".snakemake", ".ipynb_checkpoints", ".pixi",
-                        "_build/*.*", "target/*.*", "libs/*.*"
+                        "_build/*.*", "target/*.*", "libs/*.*", "html/*.*", "node_modules/*.*", "dist/*.*", "build/*.*",
                     },
                 },
-
+                pickers = {
+                  marks = {
+                    attach_mappings = function(prompt_bufnr, map)
+                      map("i", "<C-d>", function()
+                        require("telescope.actions").delete_mark(prompt_bufnr)
+                      end)
+                      return true -- Keep default mappings as well as the custom ones
+                    end,
+                  },
+                },
 
                 -- pickers = {
-                --   marks = {
-                --     attach_mappings = function(prompt_bufnr, map)
-                --       map("i", "<C-d>", function()
-                --         require("telescope.actions").delete_mark(prompt_bufnr)
-                --       end)
-                --       return true -- Keep default mappings as well as the custom ones
-                --     end,
-                --   },
-                -- },
-
-                pickers = {
-                    marks = {
-                      attach_mappings = function(_, map)
-                        map({"i", "n"}, "<C-d>", require("telescope.actions").delete_mark)
-                        return true
-                      end,
-                    },
-                  },
+                --     marks = {
+                --       attach_mappings = function(_, map)
+                --         map({"i", "n"}, "<C-d>", require("telescope.actions").delete_mark)
+                --         return true
+                --       end,
+                --     },
+                --  },
 
 
 
