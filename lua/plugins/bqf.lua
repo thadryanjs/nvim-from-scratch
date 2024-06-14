@@ -1,6 +1,6 @@
 return {
     {
-        enabled = false,
+        enabled = true,
         "kevinhwang91/nvim-bqf"
     },
 }
