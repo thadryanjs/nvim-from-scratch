@@ -44,6 +44,8 @@ vim.opt.breakindent = true
 vim.o.updatetime = 500
 
 -- how lsp diagnostics are displayed
+--
+vim.opt.signcolumn = 'yes'
 -- making these toggleable would be nice
 vim.diagnostic.config {
   virtual_text = false,
